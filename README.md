@@ -1,50 +1,57 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+###  **Jour 1 — Configuration & Découverte**
+**Mission :** Préparer l’environnement et comprendre les outils  
+**Tâches :** 
+- Créer le projet : `npx create-expo-app COFFFE-SHOP `
+- Faire tourner l’application sur téléphone ou émulateur  
+- Lire/Regarder :
 
-1. Install dependencies
+- Dessiner les deux écrans sur  Figma  
+ 
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+###  **Jour 2 — Écran 1 (Accueil)**
+**Mission :** Créer le premier écran  
+**Tâches :**
+- Créer un composant `HomeScreen`  
+- Ajouter :
+  - Nom du café
+  - Message de bienvenue
+  - Bouton “Voir le Menu”
 
-   ```bash
-   npx expo start
-   ```
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+###  **Jour 3 — Navigation & Écran 2 (Menu)**
+**Mission :** Créer la navigation et le deuxième écran  
+**Tâches :**
+- Installer et configurer **Expo Router**
+- Créer un écran `MenuScreen`
+- Ajouter une liste de **3–5 boissons avec prix**
+- Ajouter un bouton **“Retour”**
+- Tester la navigation entre Accueil ↔ Menu  
+ 
 
-## Get a fresh project
+---
 
-When you're ready, run:
+###  **Jour 4 — useEffect & Style**
+**Mission :** Ajouter des fonctionnalités et peaufiner le design  
+**Tâches :**
+- Utiliser `useEffect` dans l’écran `MenuScreen` :
+  - Afficher un message après 1 seconde
+  - Ou afficher un log au chargement
+- Améliorer le style global :
+  - Couleurs
+  - Espacement
+  - Boutons attrayants  
+ 
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
