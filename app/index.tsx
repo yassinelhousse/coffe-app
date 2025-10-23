@@ -1,143 +1,126 @@
 import { router } from "expo-router";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function index() {
   return (
-    <View style={styles.container}>
-      {/* En-tête avec emoji café */}
-      <View style={styles.header}>
-        <Text style={styles.emoji}>☕</Text>
-        <Text style={styles.title}>Coffee App</Text>
-        <Text style={styles.subtitle}>Découvrez nos délicieux cafés</Text>
-      </View>
+    <ImageBackground
+      source={require('../assets/images/dark-coffee.jpg')}
+      style={styles.background}
+      imageStyle={styles.imageStyle}
+      resizeMode="cover"
+      
+      >
+        <View style={styles.titleContainer}>
 
-      {/* Cartes de navigation */}
-      <View style={styles.cardsContainer}>
-        {/* Carte Menu */}
-        <Pressable style={styles.card} onPress={() => router.push("/menu")}>
-          <Text style={styles.cardEmoji}>📋</Text>
-          <Text style={styles.cardTitle}>Notre Menu</Text>
-          <Text style={styles.cardDescription}>Découvrez tous nos cafés</Text>
-        </Pressable>
+          <Text style={styles.title}>Coffe Shop</Text>
+          <Text style={styles.subtitle}>welcome to cosy coffe corner, 
+            where every cup is a delightfull for you.</Text>
+            
+            <Pressable style={styles.button} onPress={() => router.push('/menu')}>
+              <Text style={styles.buttonText}>Get Started</Text>
+            </Pressable>
 
-        {/* Carte Favoris */}
-        <Pressable style={styles.card} onPress={() => router.push("/menu")}>
-          <Text style={styles.cardEmoji}>❤️</Text>
-          <Text style={styles.cardTitle}>Favoris</Text>
-          <Text style={styles.cardDescription}>Vos cafés préférés</Text>
-        </Pressable>
-      </View>
+        </View>
+        <View style={styles.indicator}>
 
-      {/* Bouton principal */}
-      <Pressable style={styles.mainButton} onPress={() => router.push("/menu")}>
-        <Text style={styles.mainButtonText}>Commander Maintenant</Text>
-      </Pressable>
+        </View>
 
-      {/* Info du jour */}
-      <View style={styles.promoCard}>
-        <Text style={styles.promoTitle}>☀️ Offre du jour</Text>
-        <Text style={styles.promoText}>Cappuccino à -20% jusqu'à 15h !</Text>
-      </View>
-    </View>
+      </ImageBackground>
+      
+
   );
-}
-
+  
+};
 const styles = StyleSheet.create({
-  container: {
+  
+  background: {
     flex: 1,
-    backgroundColor: "#f4ede4",
-    padding: 20,
+    height:'80%',
+    overflow:'hidden',
+    backgroundColor: '#F7F6F6BA',
+    
+    
   },
-  header: {
-    alignItems: "center",
-    marginTop: 40,
-    marginBottom: 40,
+  imageStyle: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    
+
   },
-  emoji: {
-    fontSize: 80,
-    marginBottom: 10,
+
+  titleContainer:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:200,
+    
+    
   },
-  title: {
-    fontSize: 36,
-    fontWeight: "bold",
-    color: "#6b3e26",
-    marginBottom: 8,
+  title:{
+    fontSize:48,
+    color:'#FEFEFE',
+    fontFamily:'Rowdies',
+    fontWeight:'bold',
+    textShadowColor: 'rgba(0, 0, 0, 0.8)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 4,
+    marginBottom:19,
+
+    
   },
-  subtitle: {
-    fontSize: 16,
-    color: "#8B6F47",
-    textAlign: "center",
+  subtitle:{
+    fontSize:20,
+    color:'#C3C0C0',
+    textAlign:'center',
+    width:'80%',
+    fontFamily:'italic',
+    lineHeight:24,
+    
+    
+
   },
-  cardsContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 30,
+  button:{
+    position:'absolute',
+    bottom:50,
+   
+    backgroundColor:'#947257D9',
+    alignItems:'center',
+    borderRadius:13,
+    width:'70%',
+    height:80,
+    justifyContent:'center',
+    
+
   },
-  card: {
-    backgroundColor: "white",
-    borderRadius: 16,
-    padding: 20,
-    width: "48%",
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+
+  buttonText:{
+    color:'#FEFEFE',
+    fontSize:32,
+    fontFamily:'Roboto', 
+    fontWeight:400,
+    fontStyle: 'italic',
+    
+
+
   },
-  cardEmoji: {
-    fontSize: 40,
-    marginBottom: 10,
+  indicator:{
+    position:'absolute',
+    backgroundColor:'#333',
+    width:170,
+    height:6,
+    borderRadius:3,
+    bottom:15,
+    right:'31%',
+    
+
+  
   },
-  cardTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#6b3e26",
-    marginBottom: 5,
-  },
-  cardDescription: {
-    fontSize: 12,
-    color: "#999",
-    textAlign: "center",
-  },
-  mainButton: {
-    backgroundColor: "#6b3e26",
-    borderRadius: 12,
-    padding: 18,
-    alignItems: "center",
-    marginBottom: 20,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
-    elevation: 5,
-  },
-  mainButtonText: {
-    color: "white",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  promoCard: {
-    backgroundColor: "#fff8dc",
-    borderRadius: 12,
-    padding: 16,
-    borderWidth: 2,
-    borderColor: "#ffd700",
-  },
-  promoTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#6b3e26",
-    marginBottom: 5,
-  },
-  promoText: {
-    fontSize: 14,
-    color: "#8B6F47",
-  },
-});
+
+
+
+
+})
+
+
+
