@@ -4,7 +4,7 @@
     "slug": "movapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/caffeCrem.png",
     "scheme": "movapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
