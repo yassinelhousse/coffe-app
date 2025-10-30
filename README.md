@@ -1,56 +1,61 @@
 
+☕ Coffee App
 
-###  **Jour 1 — Configuration & Découverte**
-**Mission :** Préparer l’environnement et comprendre les outils  
-**Tâches :** 
-- Créer le projet : `npx create-expo-app COFFFE-SHOP `
-- Faire tourner l’application sur téléphone ou émulateur  
-- Lire/Regarder :
+Coffee App est une application mobile développée avec React Native (Expo).
+Elle permet aux utilisateurs de parcourir une sélection de cafés, de découvrir leurs descriptions et d’afficher les détails de chaque produit.
 
-- Dessiner les deux écrans sur  Figma  
- 
+⸻
 
----
+🚀 Fonctionnalités principales
 
-###  **Jour 2 — Écran 1 (Accueil)**
-**Mission :** Créer le premier écran  
-**Tâches :**
-- Créer un composant `HomeScreen`  
-- Ajouter :
-  - Nom du café
-  - Message de bienvenue
-  - Bouton “Voir le Menu”
+🏠 1. Page d’accueil (index.tsx)
+	•	Affiche une introduction ou un écran de bienvenue (splash / home).
+	•	Présente une courte description de l’application.
+	•	Bouton pour accéder au menu principal.
 
+📋 2. Page Menu (menu.tsx)
+	•	Affiche la liste des produits de café disponibles.
+	•	Chaque carte de produit contient :
+	•	Une image du café ☕
+	•	Son nom
+	•	Une courte description
+	•	Son prix 💰
 
+🔍 3. Page Détails (details.tsx)
+	•	Montre les informations détaillées d’un produit sélectionné :
+	•	Image en grand format
+	•	Description complète
+	•	Prix
+	•	Bouton “Commander” ou “Ajouter au panier” (optionnel)
 
----
+⸻
 
-###  **Jour 3 — Navigation & Écran 2 (Menu)**
-**Mission :** Créer la navigation et le deuxième écran  
-**Tâches :**
-- Installer et configurer **Expo Router**
-- Créer un écran `MenuScreen`
-- Ajouter une liste de **3–5 boissons avec prix**
-- Ajouter un bouton **“Retour”**
-- Tester la navigation entre Accueil ↔ Menu  
- 
+🛠️ Technologies utilisées
+	•	React Native (avec Expo)
+	•	TypeScript
+	•	React Navigation (pour la navigation entre les pages)
+	•	StyleSheet de React Native pour le design
 
----
+📂 Structure du projet
+coffee-app/
+│
+├── app/
+│   ├── index.tsx          # Page d’accueil
+│   ├── menu.tsx           # Liste des produits
+│   ├── details.tsx        # Détails du produit
+│
+├── components/            # Composants réutilisables (ex: CoffeeCard)
+├── assets/                # Images et ressources
+├── package.json
+├── README.md
+└── app.json
 
-###  **Jour 4 — useEffect & Style**
-**Mission :** Ajouter des fonctionnalités et peaufiner le design  
-**Tâches :**
-- Utiliser `useEffect` dans l’écran `MenuScreen` :
-  - Afficher un message après 1 seconde
-  - Ou afficher un log au chargement
-- Améliorer le style global :
-  - Couleurs
-  - Espacement
-  - Boutons attrayants  
- 
+📱 Lancement du projet
 
----
-
+1. Installer les dépendances
+    -npm install
+2. Lancer l’application
+  -npx expo start
 
 
 
