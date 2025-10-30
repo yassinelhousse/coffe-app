@@ -9,7 +9,7 @@ Elle permet aux utilisateurs de parcourir une sélection de cafés, de découvri
 🚀 Fonctionnalités principales
 
 🏠 1. Page d’accueil (index.tsx)
-	•	Affiche une introduction ou un écran de bienvenue (splash / home).
+	•	Affiche une introduction ou un écran de bienvenue (index).
 	•	Présente une courte description de l’application.
 	•	Bouton pour accéder au menu principal.
 
